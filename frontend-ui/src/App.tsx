@@ -1,12 +1,16 @@
-import { SearchForm } from './components/SearchForm/SearchForm';
-import './App.css';
+import { Box, Heading, Container } from '@chakra-ui/react';
+import { SearchForm } from './components/SearchForm';
 
 function App() {
 	return (
-		<div className="app">
-			<h1>Semble MCP Demo</h1>
+		<Container maxW="container.xl" py={8}>
+			<Box textAlign="center" mb={8}>
+				<Heading as="h1" size="xl">
+					Semble MCP Demo
+				</Heading>
+			</Box>
 			<SearchForm />
-		</div>
+		</Container>
 	);
 }
 
