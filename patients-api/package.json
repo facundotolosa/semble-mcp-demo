@@ -11,7 +11,8 @@
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
 		"format": "prettier --write \"src/**/*.ts\"",
-		"seed": "ts-node scripts/seed.ts"
+		"seed:import": "ts-node scripts/seed.ts -i",
+		"seed:destroy": "ts-node scripts/seed.ts -d"
 	},
 	"dependencies": {
 		"@apollo/server": "^4.10.0",
