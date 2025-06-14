@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
@@ -22,7 +23,7 @@ async function startServer() {
 	app.use('/graphql', expressMiddleware(server));
 
 	app.listen(PORT, () => {
-		console.log(`GraphQL server running at http://localhost:${PORT}/graphql`);
+		console.log(`🚀 Server running at http://localhost:${PORT}/graphql`);
 	});
 }
 
