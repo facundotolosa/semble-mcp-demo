@@ -1,29 +1,61 @@
-import { Box, FormControl, Input, Button, VStack, Text, Center } from '@chakra-ui/react';
+import {
+	Box,
+	FormControl,
+	Input,
+	Button,
+	VStack,
+	Text,
+	Center,
+	InputGroup,
+	InputRightAddon,
+	IconButton
+} from '@chakra-ui/react';
 import { PatientCard } from '../PatientCard';
 import { ListLoading } from './ListLoading';
 import { useSearchForm } from './hooks/useSearchForm';
+import { getRandomPrompt } from './utils/getRandomPrompt';
+import magicStickIcon from '../../assets/magic-stick.svg';
 
 export const SearchForm = () => {
 	const { query, setQuery, loading, error, patients, hasSearched, handleSubmit } = useSearchForm();
 
 	const showNoResults = !loading && hasSearched && patients.length === 0 && !error;
 
+	const handleMagicWandClick = () => {
+		setQuery(getRandomPrompt());
+	};
+
 	return (
 		<Box as="form" onSubmit={handleSubmit} mb={8}>
 			<FormControl>
 				<VStack spacing={4}>
-					<Input
-						type="text"
-						placeholder="Who are you looking for today?"
-						value={query}
-						onChange={e => setQuery(e.target.value)}
-						size="lg"
-						autoComplete="off"
-						_focus={{
-							borderColor: 'rgb(0, 125, 125)',
-							boxShadow: '0 0 0 1px rgb(0, 125, 125)'
-						}}
-					/>
+					<InputGroup size="lg">
+						<Input
+							type="text"
+							placeholder="Who are you looking for today?"
+							value={query}
+							onChange={e => setQuery(e.target.value)}
+							autoComplete="off"
+							_focus={{
+								boxShadow: '0 0 0 1px rgb(0, 125, 125)'
+							}}
+						/>
+						<InputRightAddon bg="transparent" borderColor="inherit" p={0}>
+							<IconButton
+								aria-label="Generate random search prompt"
+								icon={<Box as="img" src={magicStickIcon} alt="Magic Stick" boxSize="25px" />}
+								onClick={handleMagicWandClick}
+								variant="ghost"
+								h="100%"
+								minW="auto"
+								px={2}
+								_focusVisible={{
+									boxShadow: '0 0 0 2px rgb(0, 125, 125)',
+									borderLeftRadius: '0'
+								}}
+							/>
+						</InputRightAddon>
+					</InputGroup>
 					<Button
 						type="submit"
 						isLoading={loading}
@@ -31,7 +63,10 @@ export const SearchForm = () => {
 						width="full"
 						bg="rgb(0, 125, 125)"
 						_hover={{ bg: 'rgb(0, 105, 105)' }}
-						_active={{ bg: 'rgb(0, 95, 95)' }}
+						_active={{ bg: 'rgb(0, 0, 0)' }}
+						_focus={{
+							boxShadow: '0 0 0 2px rgb(0, 0, 0)'
+						}}
 						color="white"
 					>
 						Search
