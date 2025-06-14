@@ -1,6 +1,7 @@
 [
 	{
 		"title": "Mr.",
+		"status": "Active",
 		"firstName": "John",
 		"lastName": "Doe",
 		"fullName": "John Doe",
@@ -11,6 +12,7 @@
 	},
 	{
 		"title": "Mrs.",
+		"status": "Active",
 		"firstName": "Maria",
 		"lastName": "Garcia",
 		"fullName": "Maria Garcia",
@@ -21,6 +23,7 @@
 	},
 	{
 		"title": "Dr.",
+		"status": "Inactive",
 		"firstName": "Peter",
 		"lastName": "Jones",
 		"fullName": "Peter Jones",
@@ -31,6 +34,7 @@
 	},
 	{
 		"title": "Ms.",
+		"status": "Active",
 		"firstName": "Samantha",
 		"lastName": "Smith",
 		"fullName": "Samantha Smith",
@@ -38,5 +42,314 @@
 		"gender": "Female",
 		"email": "samantha.s@work.com",
 		"occupation": "Designer"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "David",
+		"lastName": "Lee",
+		"fullName": "David Lee",
+		"dob": "1988-07-22",
+		"gender": "Male",
+		"email": "david.lee@web.com",
+		"occupation": "Data Scientist"
+	},
+	{
+		"title": "Ms.",
+		"status": "Inactive",
+		"firstName": "Emily",
+		"lastName": "Chen",
+		"fullName": "Emily Chen",
+		"dob": "1995-01-12",
+		"gender": "Female",
+		"email": "emily.chen@mail.com",
+		"occupation": "Marketing Specialist"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "Michael",
+		"lastName": "Brown",
+		"fullName": "Michael Brown",
+		"dob": "1982-03-05",
+		"gender": "Male",
+		"email": "michael.b@office.com",
+		"occupation": "Accountant"
+	},
+	{
+		"title": "Dr.",
+		"status": "Active",
+		"firstName": "Sarah",
+		"lastName": "Wilson",
+		"fullName": "Sarah Wilson",
+		"dob": "1980-09-18",
+		"gender": "Female",
+		"email": "sarah.w@health.org",
+		"occupation": "Psychologist"
+	},
+	{
+		"title": "Mr.",
+		"status": "Inactive",
+		"firstName": "Chris",
+		"lastName": "Taylor",
+		"fullName": "Chris Taylor",
+		"dob": "1991-12-01",
+		"gender": "Male",
+		"email": "chris.t@inbox.com",
+		"occupation": "DevOps Engineer"
+	},
+	{
+		"title": "Ms.",
+		"status": "Active",
+		"firstName": "Jessica",
+		"lastName": "Martinez",
+		"fullName": "Jessica Martinez",
+		"dob": "1989-06-25",
+		"gender": "Female",
+		"email": "jess.martinez@company.com",
+		"occupation": "HR Manager"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "Daniel",
+		"lastName": "Rodriguez",
+		"fullName": "Daniel Rodriguez",
+		"dob": "1984-04-14",
+		"gender": "Male",
+		"email": "daniel.r@service.net",
+		"occupation": "Systems Analyst"
+	},
+	{
+		"title": "Mrs.",
+		"status": "Active",
+		"firstName": "Laura",
+		"lastName": "Hernandez",
+		"fullName": "Laura Hernandez",
+		"dob": "1993-02-28",
+		"gender": "Female",
+		"email": "laura.h@tech.co",
+		"occupation": "UX Researcher"
+	},
+	{
+		"title": "Mr.",
+		"status": "Inactive",
+		"firstName": "James",
+		"lastName": "Lopez",
+		"fullName": "James Lopez",
+		"dob": "1975-10-10",
+		"gender": "Male",
+		"email": "james.lopez@consulting.com",
+		"occupation": "Consultant"
+	},
+	{
+		"title": "Ms.",
+		"status": "Active",
+		"firstName": "Nancy",
+		"lastName": "Gonzalez",
+		"fullName": "Nancy Gonzalez",
+		"dob": "1998-03-20",
+		"gender": "Female",
+		"email": "nancy.g@startup.io",
+		"occupation": "Junior Developer"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "Robert",
+		"lastName": "Perez",
+		"fullName": "Robert Perez",
+		"dob": "1986-11-30",
+		"gender": "Male",
+		"email": "robert.p@domain.com",
+		"occupation": "Project Manager"
+	},
+	{
+		"title": "Ms.",
+		"status": "Inactive",
+		"firstName": "Linda",
+		"lastName": "Sanchez",
+		"fullName": "Linda Sanchez",
+		"dob": "1981-08-08",
+		"gender": "Female",
+		"email": "linda.s@archive.org",
+		"occupation": "Librarian"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "Joseph",
+		"lastName": "Ramirez",
+		"fullName": "Joseph Ramirez",
+		"dob": "1994-07-07",
+		"gender": "Male",
+		"email": "joseph.r@solutions.com",
+		"occupation": "IT Support"
+	},
+	{
+		"title": "Ms.",
+		"status": "Active",
+		"firstName": "Karen",
+		"lastName": "Torres",
+		"fullName": "Karen Torres",
+		"dob": "1983-05-16",
+		"gender": "Female",
+		"email": "karen.t@webmail.com",
+		"occupation": "Graphic Designer"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "Thomas",
+		"lastName": "Flores",
+		"fullName": "Thomas Flores",
+		"dob": "1990-09-01",
+		"gender": "Male",
+		"email": "thomas.f@mymail.com",
+		"occupation": "Architect"
+	},
+	{
+		"title": "Ms.",
+		"status": "Active",
+		"firstName": "Betty",
+		"lastName": "Rivera",
+		"fullName": "Betty Rivera",
+		"dob": "1979-12-12",
+		"gender": "Female",
+		"email": "betty.r@media.com",
+		"occupation": "Journalist"
+	},
+	{
+		"title": "Mr.",
+		"status": "Inactive",
+		"firstName": "Kevin",
+		"lastName": "Gomez",
+		"fullName": "Kevin Gomez",
+		"dob": "2000-01-01",
+		"gender": "Male",
+		"email": "kevin.g@university.edu",
+		"occupation": "Student"
+	},
+	{
+		"title": "Ms.",
+		"status": "Active",
+		"firstName": "Sandra",
+		"lastName": "Cruz",
+		"fullName": "Sandra Cruz",
+		"dob": "1987-04-05",
+		"gender": "Female",
+		"email": "sandra.c@finance.com",
+		"occupation": "Financial Analyst"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "Steven",
+		"lastName": "Reyes",
+		"fullName": "Steven Reyes",
+		"dob": "1996-06-18",
+		"gender": "Male",
+		"email": "steven.r@gaming.com",
+		"occupation": "Game Developer"
+	},
+	{
+		"title": "Ms.",
+		"status": "Inactive",
+		"firstName": "Donna",
+		"lastName": "Morales",
+		"fullName": "Donna Morales",
+		"dob": "1980-08-20",
+		"gender": "Female",
+		"email": "donna.m@legal.com",
+		"occupation": "Lawyer"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "Paul",
+		"lastName": "Gutierrez",
+		"fullName": "Paul Gutierrez",
+		"dob": "1992-10-25",
+		"gender": "Male",
+		"email": "paul.g@agency.com",
+		"occupation": "Sales Representative"
+	},
+	{
+		"title": "Ms.",
+		"status": "Active",
+		"firstName": "Helen",
+		"lastName": "Ortiz",
+		"fullName": "Helen Ortiz",
+		"dob": "1988-01-15",
+		"gender": "Female",
+		"email": "helen.o@fashion.com",
+		"occupation": "Fashion Designer"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "George",
+		"lastName": "Jimenez",
+		"fullName": "George Jimenez",
+		"dob": "1976-03-03",
+		"gender": "Male",
+		"email": "george.j@construction.com",
+		"occupation": "Civil Engineer"
+	},
+	{
+		"title": "Dr.",
+		"status": "Active",
+
+		"firstName": "Alice",
+		"lastName": "Johnson",
+		"fullName": "Alice Johnson",
+		"dob": "1985-08-12",
+		"gender": "Female",
+		"email": "alice.j@hospital.com",
+		"occupation": "Surgeon"
+	},
+	{
+		"title": "Mr.",
+		"status": "Inactive",
+		"firstName": "Bob",
+		"lastName": "Williams",
+		"fullName": "Bob Williams",
+		"dob": "1991-04-25",
+		"gender": "Male",
+		"email": "bob.w@example.org",
+		"occupation": "Mechanic"
+	},
+	{
+		"title": "Ms.",
+		"status": "Active",
+		"firstName": "Charlie",
+		"lastName": "Miller",
+		"fullName": "Charlie Miller",
+		"dob": "1989-09-30",
+		"gender": "Female",
+		"email": "charlie.m@tech.io",
+		"occupation": "Network Administrator"
+	},
+	{
+		"title": "Mr.",
+		"status": "Active",
+		"firstName": "Frank",
+		"lastName": "Davis",
+		"fullName": "Frank Davis",
+		"dob": "1972-12-15",
+		"gender": "Male",
+		"email": "frank.d@finance.co",
+		"occupation": "Investment Banker"
+	},
+	{
+		"title": "Ms.",
+		"status": "Inactive",
+		"firstName": "Grace",
+		"lastName": "Garcia",
+		"fullName": "Grace Garcia",
+		"dob": "2001-07-20",
+		"gender": "Female",
+		"email": "grace.g@university.edu",
+		"occupation": "Student"
 	}
 ]
