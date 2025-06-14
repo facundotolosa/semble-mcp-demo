@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Box, FormControl, Input, Button, VStack, Text, Spinner, Center } from '@chakra-ui/react';
+import { Box, FormControl, Input, Button, VStack, Text, Center } from '@chakra-ui/react';
 import { api } from '../../services/api';
 import { PatientCard } from '../PatientCard';
+import { ListLoading } from './ListLoading';
 import type { Patient } from '../../types';
 
 export const SearchForm = () => {
@@ -44,28 +45,30 @@ export const SearchForm = () => {
 				<VStack spacing={4}>
 					<Input
 						type="text"
-						placeholder="Enter your query (e.g., show me all patients with last name Smith)"
+						placeholder="Who are you looking for today?"
 						value={query}
 						onChange={e => setQuery(e.target.value)}
 						size="lg"
+						autoComplete="off"
+						_focus={{
+							borderColor: 'rgb(0, 125, 125)',
+							boxShadow: '0 0 0 1px rgb(0, 125, 125)'
+						}}
 					/>
 					<Button
 						type="submit"
 						isLoading={loading}
 						loadingText="Searching..."
 						width="full"
-						colorScheme="blue"
+						bg="rgb(0, 125, 125)"
+						_hover={{ bg: 'rgb(0, 105, 105)' }}
+						_active={{ bg: 'rgb(0, 95, 95)' }}
+						color="white"
 					>
 						Search
 					</Button>
 				</VStack>
 			</FormControl>
-
-			{loading && (
-				<Center my={8}>
-					<Spinner size="xl" />
-				</Center>
-			)}
 
 			{error && (
 				<Text color="red.500" textAlign="center" mt={4}>
@@ -73,17 +76,21 @@ export const SearchForm = () => {
 				</Text>
 			)}
 
-			{!loading && !error && hasSearched && patients.length === 0 && query && (
-				<Text textAlign="center" mt={4} color="gray.500">
-					No patients found matching your search criteria.
-				</Text>
+			{loading ? (
+				<ListLoading />
+			) : !loading && hasSearched && patients.length === 0 && !error ? (
+				<Center py={8}>
+					<Text fontSize="lg" color="gray.500">
+						No patients found matching your search
+					</Text>
+				</Center>
+			) : (
+				<VStack spacing={4} mt={8}>
+					{patients.map(patient => (
+						<PatientCard key={patient.id} patient={patient} />
+					))}
+				</VStack>
 			)}
-
-			<VStack spacing={4} mt={8}>
-				{patients.map(patient => (
-					<PatientCard key={patient.id} patient={patient} />
-				))}
-			</VStack>
 		</Box>
 	);
 };
