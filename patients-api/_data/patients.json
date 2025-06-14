@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Mr.",
+		"firstName": "John",
+		"lastName": "Doe",
+		"fullName": "John Doe",
+		"dob": "1985-05-20",
+		"gender": "Male",
+		"email": "john.doe@example.com",
+		"occupation": "Software Engineer"
+	},
+	{
+		"title": "Mrs.",
+		"firstName": "Maria",
+		"lastName": "Garcia",
+		"fullName": "Maria Garcia",
+		"dob": "1990-11-15",
+		"gender": "Female",
+		"email": "maria.garcia@email.com",
+		"occupation": "Product Manager"
+	},
+	{
+		"title": "Dr.",
+		"firstName": "Peter",
+		"lastName": "Jones",
+		"fullName": "Peter Jones",
+		"dob": "1978-02-10",
+		"gender": "Male",
+		"email": "peter.jones@clinic.com",
+		"occupation": "Doctor"
+	},
+	{
+		"title": "Ms.",
+		"firstName": "Samantha",
+		"lastName": "Smith",
+		"fullName": "Samantha Smith",
+		"dob": "1992-08-30",
+		"gender": "Female",
+		"email": "samantha.s@work.com",
+		"occupation": "Designer"
+	}
+]

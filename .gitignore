@@ -9,6 +9,7 @@ out/
 
 # Environment files
 .env
+cred.txt
 
 # Debug logs
 npm-debug.log*
