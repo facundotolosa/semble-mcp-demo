@@ -6,6 +6,8 @@ import { useSearchForm } from './hooks/useSearchForm';
 export const SearchForm = () => {
 	const { query, setQuery, loading, error, patients, hasSearched, handleSubmit } = useSearchForm();
 
+	const showNoResults = !loading && hasSearched && patients.length === 0 && !error;
+
 	return (
 		<Box as="form" onSubmit={handleSubmit} mb={8}>
 			<FormControl>
@@ -43,15 +45,17 @@ export const SearchForm = () => {
 				</Text>
 			)}
 
-			{loading ? (
-				<ListLoading />
-			) : !loading && hasSearched && patients.length === 0 && !error ? (
+			{loading && <ListLoading />}
+
+			{showNoResults && (
 				<Center py={8}>
 					<Text fontSize="lg" color="gray.500">
 						No patients found matching your search
 					</Text>
 				</Center>
-			) : (
+			)}
+
+			{!loading && patients.length > 0 && (
 				<VStack spacing={4} mt={8}>
 					{patients.map(patient => (
 						<PatientCard key={patient.id} patient={patient} />
