@@ -25,7 +25,7 @@ async function startServer() {
 	app.use('/graphql', expressMiddleware(server));
 
 	app.listen(PORT, () => {
-		console.log(`🚀 Server running at http://localhost:${PORT}/graphql`);
+		console.log(`Server running at http://localhost:${PORT}/graphql`);
 	});
 }
 

@@ -5,7 +5,7 @@ export class GraphQLService {
 	private apiUrl: string;
 
 	constructor() {
-		this.apiUrl = process.env.BACKEND_API_URL || 'http://backend-api:5000/graphql';
+		this.apiUrl = process.env.BACKEND_API_URL || 'http://localhost:4000/graphql';
 	}
 
 	async executeQuery(query: string): Promise<GraphQLResponse> {

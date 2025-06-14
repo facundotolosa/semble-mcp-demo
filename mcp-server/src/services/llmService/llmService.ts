@@ -37,7 +37,6 @@ export class LLMService {
 			});
 
 			const response = JSON.parse(completion.choices[0].message.content || '{}');
-			console.log(response);
 			return response as LLMResponse;
 		} catch (error) {
 			return {
