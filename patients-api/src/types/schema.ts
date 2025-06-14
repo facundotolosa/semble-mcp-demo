@@ -21,6 +21,15 @@ export const typeDefs = gql`
 		pageSize: Int!
 	}
 
+	input PatientSearchInput {
+		search: String
+		status: String
+		dob: String
+		gender: String
+		occupation: String
+		title: String
+	}
+
 	type PageInfo {
 		page: Int!
 		pageSize: Int!
@@ -33,6 +42,6 @@ export const typeDefs = gql`
 	}
 
 	type Query {
-		patients(search: String, pagination: PaginationInput!): PatientData
+		patients(searchInput: PatientSearchInput, pagination: PaginationInput!): PatientData
 	}
 `;
