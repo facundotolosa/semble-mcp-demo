@@ -12,7 +12,7 @@ const patients = JSON.parse(fs.readFileSync(`${__dirname}/../_data/patients.json
 const importData = async () => {
 	try {
 		await Patient.create(patients);
-		console.log('✅ Datos importados correctamente...');
+		console.log('✅ Data imported successfully...');
 		process.exit();
 	} catch (err) {
 		console.error(err);
@@ -23,7 +23,7 @@ const importData = async () => {
 const deleteData = async () => {
 	try {
 		await Patient.deleteMany();
-		console.log('🗑️ Datos eliminados correctamente...');
+		console.log('🗑️ Data deleted successfully...');
 		process.exit();
 	} catch (err) {
 		console.error(err);
@@ -36,6 +36,6 @@ if (process.argv[2] === '-i') {
 } else if (process.argv[2] === '-d') {
 	deleteData();
 } else {
-	console.log('Por favor, usa los flags -i (importar) o -d (eliminar) para ejecutar el script.');
+	console.log('Please use -i (import) or -d (delete) flags to run the script.');
 	process.exit();
 }
