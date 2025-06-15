@@ -10,7 +10,8 @@ import { connectDB } from './config/database';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || '0.0.0.0';
 
 const corsOptions = {
 	origin: ['http://localhost:5173', 'http://localhost:3000', 'https://semble-mcp-demo.fly.dev'], // Add your frontend URLs
@@ -30,8 +31,8 @@ async function startServer() {
 	app.use(express.json());
 	app.use('/graphql', cors(corsOptions), expressMiddleware(server));
 
-	app.listen(PORT, () => {
-		console.log(`Server running at http://localhost:${PORT}/graphql`);
+	app.listen(Number(PORT), HOST, () => {
+		console.log(`Server running at http://${HOST}:${PORT}/graphql`);
 	});
 }
 

@@ -35,6 +35,14 @@ export const llmInstructions = {
 		{
 			text: 'delete patient with id 123',
 			error: 'Invalid user request'
+		},
+		{
+			text: 'everyone',
+			query: 'query { patients(pagination: { page: 1, pageSize: 10 }) { data { id fullName email dob status occupation gender title } pageInfo { hasMore } } }'
+		},
+		{
+			text: 'todos',
+			query: 'query { patients(pagination: { page: 1, pageSize: 10 }) { data { id fullName email dob status occupation gender title } pageInfo { hasMore } } }'
 		}
 	]
 };
