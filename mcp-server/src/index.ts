@@ -17,9 +17,9 @@ const corsOptions = {
 	credentials: true
 };
 
+app.use(cors(corsOptions));
 app.use(helmet());
 app.use(morgan('dev'));
-app.use(cors(corsOptions));
 app.use(express.json());
 
 app.post('/v1/api/query', (req, res) => queryController.handleQuery(req, res));

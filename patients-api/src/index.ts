@@ -30,10 +30,11 @@ async function startServer() {
 
 	await server.start();
 
+	app.use(cors(corsOptions));
 	app.use(helmet());
 	app.use(morgan('dev'));
 	app.use(express.json());
-	app.use('/graphql', cors(corsOptions), expressMiddleware(server));
+	app.use('/graphql', expressMiddleware(server));
 
 	app.listen(Number(PORT), HOST, () => {
 		console.log(`Server running at http://${HOST}:${PORT}/graphql`);
