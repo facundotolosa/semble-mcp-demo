@@ -2,26 +2,28 @@ import {
 	Box,
 	FormControl,
 	Input,
-	Button,
 	VStack,
 	Text,
 	Center,
 	InputGroup,
 	InputRightAddon,
-	IconButton
+	InputRightElement,
+	IconButton,
+	Grid
 } from '@chakra-ui/react';
 import { PatientCard } from '../PatientCard';
 import { ListLoading } from './ListLoading';
 import { useSearchForm } from './hooks/useSearchForm';
 import { getRandomPrompt } from './utils/getRandomPrompt';
 import magicStickIcon from '../../assets/magic-stick.svg';
+import searchIcon from '../../assets/search.svg';
 
 export const SearchForm = () => {
 	const { query, setQuery, loading, error, patients, hasSearched, handleSubmit } = useSearchForm();
 
 	const showNoResults = !loading && hasSearched && patients.length === 0 && !error;
 
-	const handleMagicWandClick = () => {
+	const handleGetRandomPrompt = () => {
 		setQuery(getRandomPrompt());
 	};
 
@@ -40,11 +42,28 @@ export const SearchForm = () => {
 								boxShadow: '0 0 0 1px rgb(0, 125, 125)'
 							}}
 						/>
+						<InputRightElement bg="transparent" borderColor="inherit" p={0} marginRight="33px">
+							<IconButton
+								type="submit"
+								aria-label="Search"
+								icon={<Box as="img" src={searchIcon} alt="Magic Stick" boxSize="20px" />}
+								variant="ghost"
+								h="100%"
+								minW="auto"
+								px={2}
+								_hover={{ cursor: 'pointer' }}
+								_focusVisible={{
+									boxShadow: '0 0 0 2px rgb(0, 125, 125)',
+									borderRadius: '0'
+								}}
+							/>
+						</InputRightElement>
+
 						<InputRightAddon bg="transparent" borderColor="inherit" p={0}>
 							<IconButton
 								aria-label="Generate random search prompt"
-								icon={<Box as="img" src={magicStickIcon} alt="Magic Stick" boxSize="25px" />}
-								onClick={handleMagicWandClick}
+								icon={<Box as="img" src={magicStickIcon} alt="Magic Stick" boxSize="20px" />}
+								onClick={handleGetRandomPrompt}
 								variant="ghost"
 								h="100%"
 								minW="auto"
@@ -56,21 +75,6 @@ export const SearchForm = () => {
 							/>
 						</InputRightAddon>
 					</InputGroup>
-					<Button
-						type="submit"
-						isLoading={loading}
-						loadingText="Searching..."
-						width="full"
-						bg="rgb(0, 125, 125)"
-						_hover={{ bg: 'rgb(0, 105, 105)' }}
-						_active={{ bg: 'rgb(0, 0, 0)' }}
-						_focus={{
-							boxShadow: '0 0 0 2px rgb(0, 0, 0)'
-						}}
-						color="white"
-					>
-						Search
-					</Button>
 				</VStack>
 			</FormControl>
 
@@ -91,11 +95,13 @@ export const SearchForm = () => {
 			)}
 
 			{!loading && patients.length > 0 && (
-				<VStack spacing={4} mt={8}>
+				<Grid templateColumns="repeat(auto-fit, minmax(280px, 460px))" gap={4} mt={8} justifyContent="center">
 					{patients.map(patient => (
-						<PatientCard key={patient.id} patient={patient} />
+						<Box key={patient.id} maxW="440px" w="100%">
+							<PatientCard patient={patient} />
+						</Box>
 					))}
-				</VStack>
+				</Grid>
 			)}
 		</Box>
 	);
