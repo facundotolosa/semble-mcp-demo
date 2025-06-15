@@ -31,7 +31,7 @@ export const SearchForm = () => {
 		<Box as="form" onSubmit={handleSubmit} mb={8}>
 			<FormControl>
 				<VStack spacing={4}>
-					<InputGroup size="lg" maxW="700px">
+					<InputGroup size="lg" maxW="600px">
 						<Input
 							type="text"
 							placeholder="Who are you looking for today?"
