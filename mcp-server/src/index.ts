@@ -13,7 +13,7 @@ const HOST = process.env.HOST || '0.0.0.0';
 const queryController = new QueryController();
 
 const corsOptions = {
-	origin: ['http://localhost:5173', 'https://semble-mcp-demo.fly.dev'],
+	origin: ['http://localhost:5173', 'https://semble-mcp-demo.fly.dev', 'https://semble-mcp-demo-ui.vercel.app'],
 	credentials: true
 };
 
