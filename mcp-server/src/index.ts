@@ -13,6 +13,7 @@ const HOST = process.env.HOST || '0.0.0.0';
 const queryController = new QueryController();
 
 app.use(cors());
+app.options('*', cors());
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());
@@ -20,5 +21,5 @@ app.use(express.json());
 app.post('/v1/api/query', (req, res) => queryController.handleQuery(req, res));
 
 app.listen(Number(PORT), HOST, () => {
-	console.log(`MCP Server is running at http://${HOST}:${PORT}/graphql`);
+	console.log(`MCP Server is running at http://${HOST}:${PORT}/v1/api/query`);
 });
