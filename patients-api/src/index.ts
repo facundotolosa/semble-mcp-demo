@@ -16,12 +16,7 @@ const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
 const corsOptions = {
-	origin: [
-		'http://localhost:5173',
-		'http://localhost:3000',
-		'https://semble-mcp-demo.fly.dev',
-		'https://semble-mcp-demo-ui.vercel.app'
-	],
+	origin: ['http://localhost:5173', 'http://localhost:3000', 'https://semble-mcp-demo-ui.vercel.app'],
 	credentials: true
 };
 
