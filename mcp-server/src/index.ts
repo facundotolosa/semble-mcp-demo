@@ -14,7 +14,7 @@ const queryController = new QueryController();
 
 app.use(cors());
 app.options('*', cors());
-app.use(helmet());
+
 app.use(morgan('dev'));
 app.use(express.json());
 
