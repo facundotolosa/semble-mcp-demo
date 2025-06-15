@@ -15,10 +15,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
-const corsOptions = {
-	origin: ['http://localhost:5173', 'http://localhost:3000', 'https://semble-mcp-demo-ui.vercel.app']
-};
-
 async function startServer() {
 	await connectDB();
 
@@ -29,7 +25,7 @@ async function startServer() {
 
 	await server.start();
 
-	app.use(cors(corsOptions));
+	app.use(cors());
 	app.use(helmet());
 	app.use(morgan('dev'));
 	app.use(express.json());

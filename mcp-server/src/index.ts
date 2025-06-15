@@ -12,11 +12,7 @@ const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 const queryController = new QueryController();
 
-const corsOptions = {
-	origin: ['http://localhost:5173', 'https://semble-mcp-demo-ui.vercel.app']
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());
