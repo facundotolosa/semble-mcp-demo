@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { QueryController } from './controllers/queryController';
+import helmet from 'helmet';
+import morgan from 'morgan';
 
 dotenv.config();
 
@@ -15,6 +17,8 @@ const corsOptions = {
 	credentials: true
 };
 
+app.use(helmet());
+app.use(morgan('dev'));
 app.use(cors(corsOptions));
 app.use(express.json());
 
