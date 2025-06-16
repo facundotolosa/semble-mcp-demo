@@ -1,11 +1,11 @@
-# Semble MCP Demo
+# 🤖 Semble MCP Demo
 Hello! 👋
 
 If you're reading this, is because you are reviewing my application for Software Developer at Semble. I wanted to go a step beyond a traditional resume and make this POC to demonstrate my enthusiasm for Semble's mission and some of my technical skills.
 
 This project was planned and developed from scratch in approximately 24 hours as a direct response to the job posting that I saw last week.
 
-## Demo & Repository
+## 🔗 Demo & Repository
 - [Semble MCP Demo](https://semble-mcp-demo-ui.vercel.app/)
 - [GitHub Repository](https://github.com/facundotolosa/semble-mcp-demo)
 
@@ -16,7 +16,7 @@ The application allows searching a fictional patient database by typing natural 
 <code>"find all patients with the last name Garcia"</code><br><br>
 <code>"the patient with email peter.jones@clinic.com"</code>
 
-### ✨ The Key Factor: The MCP (Model Context Protocol) Server
+### 🪄 The Key Factor: The MCP (Model Context Protocol) Server
 The heart of this project is not just the use of natural language, but how the architecture could facilitate this for Semble's clients. 
 
 #### What problem does an MCP Server solve for Semble's clients?
@@ -24,27 +24,27 @@ A client like a large clinic, might want to offer its doctors an interface where
 
 An MCP Server acts as an <b>intelligent abstraction layer</b> that solves this problem. Its responsibility is to translate a user's intent (natural language) into a standardized, secure action that the underlying system can understand (in this case, a GraphQL query).
 
-## Architecture
+## 🏗️ Architecture
 The project is structured as a monorepo containing three independent services.<br>
 <br><code><b>Frontend (Client)</b></code> -> <code><b>MCP Server (Translator)</b></code> -> <code><b>Backend API (GraphQL)</b></code>
 <br>
-1. <b>Frontend (Client):</b> <i>React, Vite, Typescript, Chakra UI.</i><br>
+1. 🎨 <b>Frontend (Client):</b> <i>React, Vite, Typescript, Chakra UI.</i><br>
 The visible face of the application. Its only responsibility is to capture the user's text, send it to the MCP Server and display the returned data. The choice of Chakra UI was a deliberate decision to align with the technologies mentioned in the job offer.
 
-2. <b>MCP Server (Translator)</b> <i>Node.js, Express, Typescript.</i><br>
+2. 🧠 <b>MCP Server (Translator)</b> <i>Node.js, Express, Typescript.</i><br>
 It acts like a proxy. It receives the client's request and uses the OpenAI SDK (gpt-4o) to translate the text into a GraphQL query, and then excecutes that query against the backend API.
 
-3. <b>Backend API (GraphQL)</b> <i>Node.js, Express, Apollo Server, Typescript, MongoDB.</i><br>
+3. 🗄️ <b>Backend API (GraphQL)</b> <i>Node.js, Express, Apollo Server, Typescript, MongoDB.</i><br>
 A GraphQL service that exposes patient data. It has no knowledge of an LLM, its only function is to respond to valid GraphQL queries.
 
-## Next Steps & Improvements
+## 🗺️ Next Steps & Improvements
 Given the 24 hour deadline, my focus was on getting a fully functional MVP up and rurnning. If this were a real world project, here are the immediate next steps I would take to improve it:
 - Dockerize the Local Environment: The monorepo is already set up for this. The next logical step is to create a docker-compose.yml file. This would allow any developer to clone the repo and run the entire application (all three services + database) with a single command.
 - Add Integration & E2E Tests: To ensure the system is robust, I'd prioritize tests that verify the entire flow. This means adding integration tests to confirm the MCP Server and the Backend API communicate correctly, and end-to-end (E2E) tests that simulate a user typing a query in the UI and getting a valid result.
 
-## Conclusions & Learnings
+## 🎓 Conclusions & Learnings
 This project has been an incredibly rewarding personal challenge. It allowed me not only to apply my preferred tech stack (React, Node, TypeScript) but also to research and apply modern architectural patterns like the MCP.
 
 I hope this project serves as a tangible demonstration of my passion for building quality products and my enthusiasm for the possibility of joining the Semble team.
 
-Thank you very much for your time and consideration!
+Thank you very much for your time and consideration! 🙏
