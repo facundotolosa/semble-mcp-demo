@@ -35,7 +35,7 @@ export const useSearchForm = () => {
 	};
 
 	useEffect(() => {
-		searchPatients('all users');
+		searchPatients('first 20 patients');
 	}, []);
 
 	const handleSubmit = async (e: React.FormEvent) => {
