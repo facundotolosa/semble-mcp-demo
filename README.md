@@ -19,10 +19,15 @@ The application allows searching a fictional patient database by typing natural 
 ### 🪄 The Key Factor: The MCP (Model Context Protocol) Server
 The heart of this project is not just the use of natural language, but how the architecture could facilitate this for Semble's clients. 
 
-#### What problem does an MCP Server solve for Semble's clients?
+#### 🔹 What problem does an MCP Server solve for Semble's clients?
 A client like a large clinic, might want to offer its doctors an interface where they can query patient data using voice or text. The challenge is integrating their own preferred AI models with Semble's structured data API securely and consistently.
 
 An MCP Server acts as an <b>intelligent abstraction layer</b> that solves this problem. Its responsibility is to translate a user's intent (natural language) into a standardized, secure action that the underlying system can understand (in this case, a GraphQL query).
+
+#### 🔹 What strategic value would this bring to Semble?
+- <b>Competitive advantage:</b> it would position Semble as an "AI ready" platform, attracting clients seeking for innovation.
+- <b>Customer retention:</b> it would offer a new capability to existing clients, allowing them to build better products on top of Semble's platform.
+- <b>Extensible ecosystem:</b> it would open the door to a new type of AI focused integrations and partners
 
 ## 🏗️ Architecture
 The project is structured as a monorepo containing three independent services.<br>
@@ -39,8 +44,8 @@ A GraphQL service that exposes patient data. It has no knowledge of an LLM, its 
 
 ## 🗺️ Next Steps & Improvements
 Given the 24 hour deadline, my focus was on getting a fully functional MVP up and rurnning. If this were a real world project, here are the immediate next steps I would take to improve it:
-- Dockerize the Local Environment: The monorepo is already set up for this. The next logical step is to create a docker-compose.yml file. This would allow any developer to clone the repo and run the entire application (all three services + database) with a single command.
-- Add Integration & E2E Tests: To ensure the system is robust, I'd prioritize tests that verify the entire flow. This means adding integration tests to confirm the MCP Server and the Backend API communicate correctly, and end-to-end (E2E) tests that simulate a user typing a query in the UI and getting a valid result.
+- <b>Dockerize the Local Environment:</b> The monorepo is already set up for this. The next logical step is to create a docker-compose.yml file. This would allow any developer to clone the repo and run the entire application (all three services + database) with a single command.
+- <b>Add Integration & E2E Tests:</b> To ensure the system is robust, I'd prioritize tests that verify the entire flow. This means adding integration tests to confirm the MCP Server and the Backend API communicate correctly, and end-to-end (E2E) tests that simulate a user typing a query in the UI and getting a valid result.
 
 ## 🎓 Conclusions & Learnings
 This project has been an incredibly rewarding personal challenge. It allowed me not only to apply my preferred tech stack (React, Node, TypeScript) but also to research and apply modern architectural patterns like the MCP.
