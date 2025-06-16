@@ -14,7 +14,7 @@ This project is a demonstration of how interaction with an existing API can be m
 The application allows searching a fictional patient database by typing natural language phrases, simulating how a clinician might want to retrieve information without complex filters:<br>
 <code>"show me the first 5 patients"</code><br><br>
 <code>"find all patients with the last name Garcia"</code><br><br>
-<code>"the patient with email peter.jones@clinic.com"</code>
+<code>"can you give me all active patients named John?"</code>
 
 ### 🪄 The Key Factor: The MCP (Model Context Protocol) Server
 The heart of this project is not just the use of natural language, but how the architecture could facilitate this for Semble's clients. 
