@@ -11,7 +11,9 @@ This project was planned and developed from scratch in approximately 24 hours as
 
 ## 💡 About the project
 This project is a demonstration of how interaction with an existing API can be modernized. The core idea is to showcase a new capability that Semble could offer to its clients, enabling them to build next-gen features for their end-users.
-The application allows searching a fictional patient database by typing natural language phrases, simulating how a clinician might want to retrieve information without complex filters:<br>
+The application allows searching a fictional patient database by typing natural language phrases, simulating how a clinician might want to retrieve information without complex filters.<br><br>
+<img src="https://i.postimg.cc/vmMr0wts/mcp-demo-gif.gif"><br><br>
+
 <code>"show me the first 5 patients"</code><br><br>
 <code>"find all patients with the last name Garcia"</code><br><br>
 <code>"can you give me all active patients named John?"</code>
